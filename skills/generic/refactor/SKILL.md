@@ -42,7 +42,7 @@ idioms third, and external style guides only when the repo has no clear conventi
 2. **Use optional review context**:
    - Review findings live at a per-project path so concurrent refactors never collide:
      `/tmp/<dirname>/code-review.md`, where `<dirname>` is the current directory's name
-     (e.g. `/tmp/agent-setup/code-review.md`).
+     (e.g. `/tmp/skills/code-review.md`).
 
      ```bash
      cat "/tmp/$(basename "$PWD")/code-review.md" 2>/dev/null

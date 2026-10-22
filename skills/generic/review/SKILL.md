@@ -84,7 +84,7 @@ review report. Never modify source code; the only file you write is the report.
 
 4. **Write the report** to the per-project path so concurrent reviews never collide:
    `/tmp/<dirname>/code-review.md`, where `<dirname>` is the current directory's name
-   (e.g. `/tmp/agent-setup/code-review.md`). Create the directory first:
+   (e.g. `/tmp/skills/code-review.md`). Create the directory first:
 
    ```bash
    mkdir -p "/tmp/$(basename "$PWD")"

@@ -4,14 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-`agent-setup` is a personal **library of Claude Code skills** authored as Markdown, not an
+`skills` is a personal **library of Claude Code skills** authored as Markdown, not an
 application. There is no build, test, or lint toolchain; the "source" is `SKILL.md` files.
 Skills are consumed by end users via the `skills` CLI:
 
 ```bash
-npx skills add BaratovSokhibjon/agent-setup            # install everything
-npx skills add BaratovSokhibjon/agent-setup --skill <name>   # install one skill by frontmatter name
-npx skills add BaratovSokhibjon/agent-setup --list     # list what is available
+npx skills add BaratovSokhibjon/skills            # install everything
+npx skills add BaratovSokhibjon/skills --skill <name>   # install one skill by frontmatter name
+npx skills add BaratovSokhibjon/skills --list     # list what is available
 ```
 
 "Working in this repo" means authoring and editing skills, so the checks that matter are

@@ -1,4 +1,4 @@
-# agent-setup
+# skills
 
 My library of Claude Code skills for development. Install what you need and Claude picks up
 the matching skill automatically when the task fits.
@@ -6,9 +6,9 @@ the matching skill automatically when the task fits.
 ## Install
 
 ```bash
-npx skills add BaratovSokhibjon/agent-setup            # everything
-npx skills add BaratovSokhibjon/agent-setup --skill <name>   # just one
-npx skills add BaratovSokhibjon/agent-setup --list     # see the full list
+npx skills add BaratovSokhibjon/skills            # everything
+npx skills add BaratovSokhibjon/skills --skill <name>   # just one
+npx skills add BaratovSokhibjon/skills --list     # see the full list
 ```
 
 ## What you get
