@@ -25,6 +25,9 @@ npx skills add BaratovSokhibjon/agent-setup --list     # see the full list
   Neki: schema, indexing, query tuning, and scaling.
 - **Write in your own voice** - draft or revise outgoing work and casual messages with
   `write-like-sokhibjon` to match Sokhibjon's English, Uzbek, or mixed Discord style.
+- **Show clients progress per cycle** - `client-cycle-slides` logs client requests, gates
+  new scope behind approved hours, and keeps one slide per half-month cycle, carrying
+  unfinished work into the next one. Client data stays in a private ledger you choose.
 
 Run `--list` for the complete, per-skill breakdown, or browse `skills/`.
 

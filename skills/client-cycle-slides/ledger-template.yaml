@@ -1,0 +1,37 @@
+# Client cycle ledger. Keep this file in a PRIVATE repository.
+client: Example Client
+client_key: example
+language: en          # language of the slides and client-facing titles
+timezone: UTC         # decides which cycle "today" is
+sources:              # where requests arrive
+  - kind: telegram
+    name: Example group
+    id: "-100000000000"
+deck:
+  slides_url: null    # Claude Slides artifact URL, once created
+  pptx_path: null     # or a rendered file path
+
+items:
+  - id: R-001
+    title: Short client-facing title
+    note: One-line internal note
+    kind: feature      # feature | fix
+    status: requested  # requested | estimated | approved | planned | in_progress | done | declined | dropped
+    hours:
+      estimate: null   # number or "8-12"
+      approved: null   # hours the client agreed to
+      estimate_sent: null  # YYYY-MM-DD
+    cycle: null        # e.g. 2026-11-C1 once planned
+    carried_from: []   # previous cycles this item moved out of
+    tracker: null      # ticket id or URL
+    source: null       # chat + message id or link, and date
+    requested_on: null # YYYY-MM-DD
+
+cycles:
+  - id: 2026-10-C2
+    start: 2026-10-16
+    end: 2026-10-31
+    closed: false
+    planned: 0         # filled when the cycle closes
+    done: 0
+    slide: 1           # slide number in the deck
