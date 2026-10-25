@@ -26,8 +26,8 @@ npx skills add BaratovSokhibjon/agent-setup --list     # see the full list
 - **Write in your own voice** - draft or revise outgoing work and casual messages with
   `write-like-sokhibjon` to match Sokhibjon's English, Uzbek, or mixed Discord style.
 - **Show clients progress per cycle** - `client-cycle-slides` logs client requests, gates
-  new scope behind approved hours, and keeps one slide per half-month cycle, carrying
-  unfinished work into the next one. Client data stays in a private ledger you choose.
+  new scope behind approved hours, and keeps big-text slides per half-month cycle (a
+  summary, then one slide per item), carrying unfinished work into the next one. Client data stays in a private ledger you choose.
 
 Run `--list` for the complete, per-skill breakdown, or browse `skills/`.
 

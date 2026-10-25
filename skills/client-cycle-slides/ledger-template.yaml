@@ -34,4 +34,7 @@ cycles:
     closed: false
     planned: 0         # filled when the cycle closes
     done: 0
-    slide: 1           # slide number in the deck
+    slides:
+      summary: c2026-10-2            # summary slide id
+      item_pattern: c2026-10-2-<item id>  # one slide per item, e.g. c2026-10-2-R-001
+      excluded: []                   # item ids that get no slide
