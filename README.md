@@ -6,6 +6,7 @@ Agent skills marketplace. All skills live in `skills/`.
 
 | Skill | What it does |
 |---|---|
+| `create-skill` | Define and create a skill through a guided interview |
 | `write-like-sokhibjon` | Draft messages in Sokhibjon's voice |
 | `grilling` (`grill-me/`) | Stress-test a plan by grilling the user |
 | `stop-slop-writing` | Remove AI writing patterns from prose |
