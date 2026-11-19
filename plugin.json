@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "sokhibjon-skills",
+  "version": "0.1.0",
+  "description": "Sokhibjon's reusable agent skills",
+  "author": {
+    "name": "Sokhibjon Baratov"
+  },
+  "repository": "https://github.com/BaratovSokhibjon/skills"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "sokhibjon-skills",
+  "description": "Sokhibjon's reusable writing and agent workflow skills",
+  "owner": {
+    "name": "Sokhibjon Baratov"
+  },
+  "plugins": [
+    {
+      "name": "sokhibjon-skills",
+      "source": "./",
+      "description": "Sokhibjon's reusable agent skills"
+    }
+  ]
+}
