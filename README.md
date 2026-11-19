@@ -6,11 +6,12 @@ Agent skills marketplace. All skills live in `skills/`.
 
 | Skill | What it does |
 |---|---|
+| `claude-planner` | Coordinate software work across Claude, Codex, OpenCode, and agent sessions |
 | `create-skill` | Define and create a skill through a guided interview |
 | `docker-conventions` | Create and review Dockerfiles and Compose using personal conventions |
 | `write-like-sokhibjon` | Draft messages in Sokhibjon's voice |
 | `grilling` (`grill-me/`) | Stress-test a plan by grilling the user |
-| `stop-slop-writing` | Remove AI writing patterns from prose |
+| `writing-conventions` | Write concise agent updates, docs, explanations, and reports |
 | `wayfinder` | Map big work as decision tickets, resolve one at a time |
 | `voxcpm` | Set up the VoxCPM CLI for speech generation, voice design, and cloning |
 
