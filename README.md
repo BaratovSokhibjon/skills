@@ -32,6 +32,26 @@ In supported ChatGPT desktop clients, open the Plugins Directory, select
 support vary by client version. This repo is a Git-backed marketplace, not a
 listing in the public ChatGPT plugin directory.
 
+### External plugin: marketing-skills
+
+This marketplace also curates
+[`marketing-skills`](https://github.com/coreyhaines31/marketingskills) by Corey
+Haines. It is a cross-repo entry, not a copy or submodule, so no skills are
+vendored here. The entry points at upstream `main`, so the client fetches the
+latest release when installing or refreshing:
+
+```bash
+claude plugin install marketing-skills@sokhibjon-skills
+claude plugin marketplace update sokhibjon-skills   # refresh to latest upstream
+
+codex plugin marketplace upgrade sokhibjon-skills   # refresh to latest upstream
+```
+
+An external plugin is offered for installation; it is not installed
+automatically when someone installs `sokhibjon-skills`. To pin a specific
+version instead of tracking `main`, add a `ref` or `sha` to the entry in both
+marketplace catalogs.
+
 ### Individual skills across agents
 
 Use the [skills CLI](https://github.com/vercel-labs/skills) to select skills and agents:
