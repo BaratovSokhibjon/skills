@@ -12,6 +12,7 @@ Agent skills marketplace. All skills live in `skills/`.
 | `grilling` (`grill-me/`) | Stress-test a plan by grilling the user |
 | `stop-slop-writing` | Remove AI writing patterns from prose |
 | `wayfinder` | Map big work as decision tickets, resolve one at a time |
+| `voxcpm` | Set up the VoxCPM CLI for speech generation, voice design, and cloning |
 
 ## Install
 
@@ -29,18 +30,6 @@ npx skills add BaratovSokhibjon/skills -a codex
 ```
 
 Use `-g` with the skills CLI for global install.
-
-This marketplace also offers Corey Haines's
-[`marketing-skills`](https://github.com/coreyhaines31/marketingskills) from upstream
-`main`:
-
-```bash
-claude plugin install marketing-skills@sokhibjon-skills
-claude plugin marketplace update sokhibjon-skills
-codex plugin marketplace upgrade sokhibjon-skills
-```
-
-It's optional and not installed with the main bundle.
 
 ## Maintain
 

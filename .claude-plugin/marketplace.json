@@ -9,14 +9,6 @@
       "name": "sokhibjon-skills",
       "source": "./",
       "description": "Sokhibjon's reusable agent skills"
-    },
-    {
-      "name": "marketing-skills",
-      "source": {
-        "source": "github",
-        "repo": "coreyhaines31/marketingskills"
-      },
-      "description": "Marketing skills for CRO, copywriting, SEO, paid ads, growth, and more"
     }
   ]
 }
