@@ -14,6 +14,7 @@ Agent skills marketplace. All skills live in `skills/`.
 | `writing-conventions` | Write concise agent updates, docs, explanations, and reports |
 | `wayfinder` | Map big work as decision tickets, resolve one at a time |
 | `voxcpm` | Set up the VoxCPM CLI for speech generation, voice design, and cloning |
+| `tesseract` | Install, run, and troubleshoot image OCR with the Tesseract CLI |
 
 ## Install
 

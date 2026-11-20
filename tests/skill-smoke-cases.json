@@ -1,0 +1,38 @@
+[
+  {
+    "id": "create-skill-interview",
+    "skill": "create-skill",
+    "prompt": "Help me create a skill for reviewing database changes. I haven't decided the details yet.",
+    "expectations": ["Ask one focused question and wait", "Do not create files or invent a complete brief"]
+  },
+  {
+    "id": "docker-review-approval",
+    "skill": "docker-conventions",
+    "prompt": "Review this existing setup. Dockerfile: FROM node:22-slim; WORKDIR /app; COPY . .; CMD [\"node\", \"server.js\"]. compose.yml has an api service built from ., a named data volume, and DB_PASSWORD defaulting to password123. The app writes logs to /logs. Report findings only; all relevant configuration is supplied here.",
+    "expectations": ["Report root-user, fallback-password, and storage convention issues", "Ask before fixes", "Do not claim to have built or run containers"]
+  },
+  {
+    "id": "planner-routing",
+    "skill": "claude-planner",
+    "prompt": "Plan the next action for a Docker audit of my app using our plugin. Don't launch agents or tools yet. Available skills include docker-conventions and writing-conventions; Docker runtime and helper availability are unknown.",
+    "expectations": ["Select docker-conventions for the audit", "Do not invent helper availability or launch work", "Respect review-before-fix approval"]
+  },
+  {
+    "id": "writing-honest-status",
+    "skill": "writing-conventions",
+    "prompt": "Write a short completion update to me: changed api/router.py, pytest passed 12 tests, integration tests were not run because Docker is unavailable. Nothing committed or pushed.",
+    "expectations": ["Include outcome, 12 passed tests, and unrun integration tests", "State not committed or pushed", "Do not invent checks or add a style score"]
+  },
+  {
+    "id": "voice-no-examples-file",
+    "skill": "write-like-sokhibjon",
+    "prompt": "Draft a short English message to my teammate asking them to review the PR today because tomorrow's release depends on it. No greeting needed.",
+    "expectations": ["Return one concise outgoing draft with request and reason", "Do not request or read a missing examples file", "Do not invent a PR link or send the message"]
+  },
+  {
+    "id": "voxcpm-explanation-only",
+    "skill": "voxcpm",
+    "prompt": "Just explain the command for generating speech with VoxCPM, saying Hello team and writing hello.wav. Don't install anything, download weights, run commands, or generate audio.",
+    "expectations": ["Provide a voxcpm design CLI command with text and output", "Do not execute, install, download, or claim audio exists", "Do not switch to the Python API"]
+  }
+]

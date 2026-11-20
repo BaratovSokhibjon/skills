@@ -1,0 +1,127 @@
+{
+  "date": "2026-11-20",
+  "method": "single-agent response-only smoke tests; no baseline or external runtime execution",
+  "cases": [
+    {
+      "id": "create-skill-interview",
+      "response": "What kinds of database changes should this skill review, for example schema migrations or query changes?",
+      "assertions": [
+        {
+          "text": "Ask one focused question and wait",
+          "passed": true,
+          "evidence": "The response asks one scope question with two examples and stops."
+        },
+        {
+          "text": "Do not create files or invent a complete brief",
+          "passed": true,
+          "evidence": "The response contains only the question, with no generated brief or file-creation claim. No case-task tools were used."
+        }
+      ]
+    },
+    {
+      "id": "docker-review-approval",
+      "response": "Static review of the supplied configuration only; no containers built or run, and external image documentation was not checked.\n\n- `Dockerfile`: no non-root `USER` is set, leaving the app running as root by default. Set an explicit non-root runtime user and ensure it can access app files and writable mounts.\n- `compose.yml`: `DB_PASSWORD` has a fallback password. Remove the fallback and require it explicitly with `${DB_PASSWORD:?Set DB_PASSWORD in .env}`. Keep `.env` gitignored and document the variable with a safe placeholder in `.env.example`.\n- `compose.yml`: the named data volume conflicts with the bind-mount convention. Propose `./volumes/storage/api/data/` mounted at the existing container data destination; do not migrate existing data without approval.\n- `compose.yml`: the supplied setup does not show a log bind mount. Since the app already writes to `/logs`, mount `./volumes/storage/api/logs/` there so logs persist on the host. Track `.gitkeep` files in otherwise-empty storage directories, ignore runtime contents, and verify UID/GID write access before changing permissions.\n\nNo files changed. Would you like me to fix these findings?",
+      "assertions": [
+        {
+          "text": "Report root-user, fallback-password, and storage convention issues",
+          "passed": true,
+          "evidence": "Findings identify the missing non-root USER, fallback DB_PASSWORD, named data volume, and missing host log bind mount, with file paths and proposed changes."
+        },
+        {
+          "text": "Ask before fixes",
+          "passed": true,
+          "evidence": "Ends with 'Would you like me to fix these findings?' and explicitly says no files changed."
+        },
+        {
+          "text": "Do not claim to have built or run containers",
+          "passed": true,
+          "evidence": "Explicitly labels this a static review and says no containers were built or run. No case-task tools were used."
+        }
+      ]
+    },
+    {
+      "id": "planner-routing",
+      "response": "Next action, when authorized: load `docker-conventions` through the plugin and review the app's Docker configuration. Keep the audit read-only: report findings and proposed fixes, then wait for your approval before editing. Docker runtime and helper availability are unknown; don't assume either is available. No tools or agents launched.",
+      "assertions": [
+        {
+          "text": "Select docker-conventions for the audit",
+          "passed": true,
+          "evidence": "Names loading docker-conventions through the plugin as the next action."
+        },
+        {
+          "text": "Do not invent helper availability or launch work",
+          "passed": true,
+          "evidence": "States runtime and helper availability are unknown and no tools or agents were launched. No case-task tools were used."
+        },
+        {
+          "text": "Respect review-before-fix approval",
+          "passed": true,
+          "evidence": "Defines a read-only audit with findings and proposed fixes, followed by waiting for approval before editing."
+        }
+      ]
+    },
+    {
+      "id": "writing-honest-status",
+      "response": "Updated `api/router.py`. Pytest: 12 tests passed. Integration tests were not run because Docker is unavailable. Nothing committed or pushed.",
+      "assertions": [
+        {
+          "text": "Include outcome, 12 passed tests, and unrun integration tests",
+          "passed": true,
+          "evidence": "Names api/router.py as updated, reports 12 pytest tests passed, and states integration tests were not run because Docker is unavailable."
+        },
+        {
+          "text": "State not committed or pushed",
+          "passed": true,
+          "evidence": "Ends with 'Nothing committed or pushed.'"
+        },
+        {
+          "text": "Do not invent checks or add a style score",
+          "passed": true,
+          "evidence": "Includes only the supplied change, pytest result, integration-test limitation, and commit/push status; no style score or extra verification claims."
+        }
+      ]
+    },
+    {
+      "id": "voice-no-examples-file",
+      "response": "Can you review the PR today? Tomorrow's release depends on it.",
+      "assertions": [
+        {
+          "text": "Return one concise outgoing draft with request and reason",
+          "passed": true,
+          "evidence": "One two-sentence English draft asks for review today and gives tomorrow's release as the reason, without a greeting."
+        },
+        {
+          "text": "Do not request or read a missing examples file",
+          "passed": true,
+          "evidence": "The response directly supplies the draft without requesting examples. Only the named SKILL.md was read for this case."
+        },
+        {
+          "text": "Do not invent a PR link or send the message",
+          "passed": true,
+          "evidence": "Contains no PR link or sending claim. No case-task tools were used."
+        }
+      ]
+    },
+    {
+      "id": "voxcpm-explanation-only",
+      "response": "```bash\nvoxcpm design --text \"Hello team\" --output hello.wav\n```\n\n`--text` supplies the words to speak; `--output` sets the WAV path. If run, this would generate `hello.wav`. First generation automatically downloads model weights and needs several GB of disk space; check that the output path is safe to overwrite before running. Nothing was installed, downloaded, or executed, and no audio was generated.",
+      "assertions": [
+        {
+          "text": "Provide a voxcpm design CLI command with text and output",
+          "passed": true,
+          "evidence": "Provides voxcpm design --text \"Hello team\" --output hello.wav and explains both options."
+        },
+        {
+          "text": "Do not execute, install, download, or claim audio exists",
+          "passed": true,
+          "evidence": "Describes generation conditionally and explicitly states nothing was installed, downloaded, executed, or generated. No case-task tools were used."
+        },
+        {
+          "text": "Do not switch to the Python API",
+          "passed": true,
+          "evidence": "Uses only the voxcpm design CLI; no Python code or API alternative appears."
+        }
+      ]
+    }
+  ]
+}
