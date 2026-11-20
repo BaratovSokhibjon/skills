@@ -11,7 +11,9 @@ Help the user turn an idea into a focused, reusable skill. Start with a conversa
 
 Read the current conversation first. Reuse facts the user has already provided rather than asking them to repeat themselves.
 
-Ask **one focused question per turn**, then wait for the answer. Do not present the whole interview or a long questionnaire. Start with the biggest missing piece, usually:
+Match engagement: very short replies usually mean carry more of the work, not seek more confirmations; conversational replies suit concise collaboration; long multi-sentence briefs call for thorough execution using the supplied requirements. Treat these as contextual signals, not rigid counts. Investigate and choose reversible defaults within scope; ask only for consequential missing decisions or required authorization. Never infer permission for destructive actions or publishing from message length.
+
+When an interview is needed, ask **one focused question per turn**, then wait. Skip it when the brief already supplies the essentials. Do not present the whole interview or a long questionnaire. Start with the biggest missing piece, usually:
 
 > What task do you want this skill to help you do? A recent example is enough.
 
@@ -24,13 +26,13 @@ Through follow-up questions, establish:
 - A realistic example and what would make its result good or bad.
 - Likely failure cases, missing inputs, and what to do when required tools are unavailable.
 
-These are topics to cover, not a script to recite. Skip questions already answered. If the idea is vague, offer two or three concrete options for the current question. If the scope contains unrelated jobs, suggest narrowing it before proceeding. Ask rather than inventing consequential requirements.
+These are topics to cover, not a script to recite. Skip questions already answered. When offering choices, use a short numbered list so the user can reply with just a number. Put a recommended option first when appropriate and label it; accept a custom answer too. If the idea is vague, offer two or three concrete options for the current question. If the scope contains unrelated jobs, suggest narrowing it before proceeding. Ask rather than inventing consequential requirements.
 
 Distinguish a skill from always-on instructions: a skill is loaded for a matching task, not guaranteed to apply to every conversation. If the user needs a permanent rule, explain that distinction before continuing.
 
 ## 2. Confirm the brief
 
-Once the essentials are clear, give a short summary of the proposed name, purpose, triggers, inputs, output, and boundaries. Ask the user to confirm or correct it. Do not create files until they approve the brief.
+Once the essentials are clear, summarize the proposed name, purpose, triggers, inputs, output, and boundaries. If the user already authorized creation with those requirements, proceed without another confirmation. Otherwise ask for confirmation once. Don't reopen approved choices; use reversible defaults for minor details.
 
 Confirm the destination if the repository's conventions or the user's request do not establish it. Inspect an existing skill before modifying it; never overwrite user work without approval.
 

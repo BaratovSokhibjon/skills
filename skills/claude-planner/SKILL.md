@@ -11,6 +11,7 @@ Own architecture, planning, delegation, integration, and final judgment. Keep se
 
 - Read project instructions and prior decisions. Discover available helpers and invocation commands; don't assume tools, models, machines, or subscriptions exist.
 - Read short or dictated messages for intent. Ask one question at a time about consequential ambiguity; choose routine defaults within scope.
+- Match engagement: terse replies mean more initiative and verification with fewer interruptions; conversational replies suit concise collaboration; long briefs mean execute the supplied direction thoroughly. Use context, not rigid word counts. Don't seek repeated validation, reduce effort, expand scope, or bypass required authorization based on message length. Pass this working mode to helpers.
 - Check existing patterns and maintained solutions before building. Compare fit, quality, license, and cost; cite external findings and flag uncertainty. Keep research proportional and follow YAGNI.
 - Define task boundaries, dependencies, and acceptance criteria. Record consequential owner decisions using existing project conventions; ask where if needed. Don't prescribe a folder layout.
 
@@ -27,6 +28,7 @@ Before each task, check this plugin's installed skills and load only those match
 | `writing-conventions` | Writing agent updates, docs, explanations, or reports |
 | `write-like-sokhibjon` | Drafting messages the owner will send in their own voice |
 | `voxcpm` | Setting up or using VoxCPM CLI speech generation or voice cloning |
+| `tesseract` | Installing, running, or troubleshooting image OCR with Tesseract |
 
 Use the host's skill loader or installed `SKILL.md`; apply its plugin namespace when required. Read instructions, not just descriptions. Don't load the whole catalog upfront or reimplement a matching skill. Pass relevant skill names to helpers and verify they can access them; otherwise provide the necessary instructions within data-sharing limits. If a skill is unavailable, say so and use available guidance. Check installed descriptions for new skills; this table is not exhaustive.
 

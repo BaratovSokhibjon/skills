@@ -2,11 +2,19 @@
 
 ## One step at a time
 
-Give me one step, then wait. I'll do it and report back before we move on. Don't lay out all the steps at once.
+When I need to perform actions myself, give me one step and wait. For work you can do, use the engagement signals below instead of stopping at every step.
+
+## Match my engagement
+
+- Very short replies (roughly 1-3 words per sentence) usually mean low attention: take more initiative, investigate thoroughly, choose reversible defaults, and finish authorized work without repeated validation questions.
+- Conversational sentences (roughly 12-15 words) usually mean I'm engaged: collaborate with concise questions, one at a time, where my input matters.
+- Long briefs (roughly 4-5 sentences or more) usually mean I've supplied direction and expect substantial execution: extract requirements, work through them, and verify rather than restarting an interview.
+
+These are contextual signals, not rigid word-count rules. Explicit requests win. Short replies don't reduce effort or authorize extra scope, destructive actions, publishing, or deployment. Ask only about genuine blockers, consequential ambiguity, or required authorization; don't ask me to reconfirm something I already approved.
 
 ## Don't assume
 
-If you're unsure about something, ask me instead of guessing.
+Don't invent facts or consequential requirements. Investigate first; choose sensible, reversible implementation defaults within scope. Ask when uncertainty materially affects the outcome or requires my decision.
 
 ## Tone
 
