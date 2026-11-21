@@ -1,6 +1,6 @@
 ---
 name: writing-conventions
-description: Writes and edits coding-agent updates, technical documentation, summaries, and general reports using the owner's concise, direct communication preferences. Use when composing progress updates, completion reports, explanations, docs, or other prose. Not for imitating the owner's personal voice in outgoing messages, which uses write-like-sokhibjon, or changing application behavior.
+description: Writes and edits coding-agent updates, technical documentation, concise tickets, summaries, and general reports using the owner's direct communication preferences. Use when composing progress updates, completion reports, task descriptions, agent briefs, explanations, or docs. Not for imitating the owner's personal voice in outgoing messages, which uses write-like-sokhibjon, or changing application behavior.
 ---
 
 # Writing conventions
@@ -25,6 +25,9 @@ For messages the owner will send in their own voice, load `write-like-sokhibjon`
 - **Completion reports:** lead with the outcome. Include relevant changed paths, checks actually run, failures or limitations, and commit/push status when applicable. Don't add a fixed report template to every reply.
 - **Docs:** explain purpose, prerequisites, and usable instructions with concrete examples where needed. Keep commands, paths, identifiers, and technical qualifications accurate. Don't cut necessary detail merely to be brief.
 - **General reports:** lead with the conclusion, then evidence, trade-offs, and needed decisions. Attribute external claims and distinguish facts from assumptions.
+- **Tickets and tasks:** keep the description human-readable and concise: what, why, essential acceptance criteria, and a link to `agent-brief.md`. Put detailed execution context in that task's brief, not a wall of text in the ticket. The ticket must remain understandable without opening the brief.
+
+For agent-backed tasks, keep a task-specific `agent-brief.md` with context, scope, relevant code and decisions, constraints, dependencies, verification, and handoff details as needed. Use the project's existing storage convention, give each task a distinct location, and link the brief back to its ticket. Keep human-visible scope and acceptance criteria aligned with the brief; don't hide consequential decisions or duplicate long explanations. Verify the receiving agent can access the linked file. Don't publish or attach private context without authorization.
 
 Prefer plain words, specific statements, and useful headings or lists. Remove filler and repetition; avoid em dashes. Preserve meaning, uncertainty, and safety caveats. Don't mechanically ban passive voice, adverbs, or three-item lists when they improve clarity.
 

@@ -25,7 +25,7 @@ Before each task, check this plugin's installed skills and load only those match
 | `docker-conventions` | Creating, editing, or reviewing Dockerfiles or Compose |
 | `grilling` | The owner wants to stress-test a plan or decision through questions |
 | `wayfinder` | Work exceeds one session and needs a map of decision tickets |
-| `writing-conventions` | Writing agent updates, docs, explanations, or reports |
+| `writing-conventions` | Writing tickets, agent briefs, updates, docs, or reports |
 | `write-like-sokhibjon` | Drafting messages the owner will send in their own voice |
 | `voxcpm` | Setting up or using VoxCPM CLI speech generation or voice cloning |
 | `tesseract` | Installing, running, or troubleshooting image OCR with Tesseract |
@@ -39,6 +39,7 @@ Follow applicable `AGENTS.md` or `CLAUDE.md` instructions throughout. Plugin ins
 - Use **Codex** for substantial implementation, tests, research, and independent review; **OpenCode** for low-risk chores, repetitive edits, and focused searches. Favor suitable low-cost models for simple work.
 - Reuse other sessions when their expertise or context fits. If helpers are unavailable, use an available alternative or work directly.
 - Before dispatch, give each helper a brief: context, outcome, owned files, off-limits areas, constraints, acceptance criteria, verification commands, and expected evidence or blockers.
+- For ticket-backed work, keep the ticket concise for humans and link a task-specific `agent-brief.md` containing full execution context. Follow existing project storage conventions, avoid shared-file collisions, and ensure the helper can read it. Keep scope and acceptance criteria synchronized; update the brief when decisions change, without copying all details into the ticket.
 - Let helpers decide routine details inside the brief, not expand scope, publish, deploy, or perform destructive actions. Never send secrets, private transcripts, or restricted data.
 - Parallelize independent tasks only. Avoid overlapping edits, define integration order, and follow project isolation conventions without disrupting live checkouts or services.
 - Route corrections to the responsible session rather than spawning duplicate workers. Run tests serially when they share an environment; don't edit it during a run.

@@ -70,6 +70,8 @@ Blocking uses the tracker's **native** dependency relationship: essential becaus
 
 The answer isn't part of the body; it's recorded on resolution (see [Work through the map](#work-through-the-map)). Assets created while resolving a ticket are linked from the issue, not pasted in.
 
+Keep ticket descriptions concise and human-readable. Link each ticket's task-specific `agent-brief.md` for detailed agent context, investigation constraints, sources, and verification needs; follow existing storage conventions rather than prescribing a folder. Keep the question and essential decision criteria in the ticket, synchronize changes, and ensure agents can access the brief. This adds context without turning decision tickets into implementation tasks or moving resolutions out of their comments.
+
 ## Ticket Types
 
 Every ticket is either **HITL** (human in the loop, worked _with_ a human who speaks for themselves) or **AFK**, driven by the agent alone. A HITL ticket only resolves through that live exchange; the agent never stands in for the human's side of it (a grilling agent that answers its own questions has broken this).
